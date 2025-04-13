@@ -32,6 +32,45 @@ Monitor and evaluate real-time system metrics:
 
 * Automatically navigates to the UERANSIM/build directory before execution.
 
+### 🔹 Subscriber Provisioning & UE YAML Generator
+This Python script automates the creation and provisioning of 5G subscribers (UEs) into a core network via REST APIs (compatible with Open5GS or similar). It also generates corresponding YAML configuration files for each UE in a format suitable for use with UEs or simulators.
+
+✨ Features
+🔐 Authenticated Login: Secure login with CSRF token handling and session management.
+
+🔄 IMSI Management: Random IMSI generation with configurable prefix and uniqueness check.
+
+📡 Subscriber Provisioning: Adds new UEs to the database via HTTP POST with bearer token + CSRF + session cookie.
+
+📁 YAML Generator: Creates a per-UE YAML file (open5gs-ueX.yaml) with properly quoted nested values for simulator compatibility.
+
+🔍 Existence Check: Prevents duplicate subscriber creation by querying the database beforehand.
+
+✅ Verification: Confirms subscriber creation by fetching and displaying the saved data.
+
+📦 Requirements
+* Python 3.x
+
+* requests
+
+* PyYAML
+
+Install dependencies:
+> pip install requests pyyaml
+🚀 Usage
+Simply run the script:
+> python subscriber_provisioning.py
+You can configure:
+
+* num_subscribers – Number of UEs to generate
+
+* USERNAME, PASSWORD, auth_token – For API access
+
+* BASE_URL – Target server URL
+
+Each IMSI will be dynamically created, checked, provisioned, verified, and then a YAML config file will be saved locally.
+
+
 ### 🔹 Post-Quantum Secure Key & Certificate Generation
 * Secure your network using quantum-safe cryptographic primitives:
 
