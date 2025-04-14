@@ -6,7 +6,7 @@ import yaml
 BASE_URL = "http://127.0.0.1:9999"  # Change to your real base URL
 
 # Manual Bearer token
-auth_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY3ODc3YzQ2ZmIwMDljNmY1YzU0NGNhNyIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlcyI6WyJhZG1pbiJdfSwiaWF0IjoxNzQ0Mzc3MzI0fQ.6FfLJTWEvhfsARQwSSstdW18J-SZc1u8UZ_wP3-Ppy0"
+auth_token = "<_TOKEN_>"
 
 # Login credentials
 USERNAME = "admin"
